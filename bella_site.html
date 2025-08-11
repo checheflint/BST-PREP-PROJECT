@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Peace</title>
+     <link rel="stylesheet" href="bella_site.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <span>AirPeace</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Discover</a>
+                <a href="#">Book</a>
+                <a href="#">Routes</a>
+                <a href="#">Media</a>
+                <a href="#">Career</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="mobile-nav" id="mobileNav">
+                <button class="close-mobile-menu" id="closeMobileMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <a href="#" class="active">Home</a>
+                <a href="#">Discover</a>
+                <a href="#">Book</a>
+                <a href="#">Routes</a>
+                <a href="#">Media</a>
+                <a href="#">Career</a>
+            </div>
+        </nav>
+        
+        <!-- Header -->
+        <header>
+            <h1>London</h1>
+            <h2>United Kingdom</h2>
+            <p>Discover Cheap flights from Lagos to London - Lagos to London flights</p>
+        </header>
+        
+        <!-- Flight Search -->
+        <section class="search-section">
+            <div class="section-title">
+                <i class="fas fa-plane"></i>
+                <h3>Flight Search</h3>
+            </div>
+            
+            <div class="flight-type">
+                <div class="flight-option" onclick="toggleFlightType('one-way')">
+                    <div class="custom-checkbox checked" id="one-way-checkbox"></div>
+                    <label>One Way</label>
+                </div>
+                <div class="flight-option" onclick="toggleFlightType('round-trip')">
+                    <div class="custom-checkbox" id="round-trip-checkbox"></div>
+                    <label>Round Trip</label>
+                </div>
+                <div class="flight-option" onclick="toggleFlightType('multi-city')">
+                    <div class="custom-checkbox" id="multi-city-checkbox"></div>
+                    <label>Multi-City</label>
+                </div>
+            </div>
+            
+            <div class="flight-details">
+                <div class="detail-card">
+                    <h3><i class="fas fa-plane-departure"></i> Departure Details</h3>
+                    <ul>
+                        <li>
+                            <div class="custom-checkbox checked"></div>
+                            <label>Lagos Airport (LOS)</label>
+                        </li>
+                        <li>
+                            <div class="custom-checkbox checked"></div>
+                            <label>London Heathrow (LHR)</label>
+                        </li>
+                        <li>
+                            <div class="custom-checkbox checked"></div>
+                            <div class="date-container">
+                                <input type="date" id="departure-date" class="date-input">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="passenger-details">
+                    <h3><i class="fas fa-users"></i> Passenger Details</h3>
+                    <ul>
+                        <li class="passenger-selector">
+                            <div class="custom-checkbox checked"></div>
+                            <div class="passenger-control">
+                                <span>Adult (12yrs+)</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('adult', -1)">-</button>
+                                <span class="passenger-count" id="adult-count">1</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('adult', 1)">+</button>
+                            </div>
+                        </li>
+                        <li class="passenger-selector">
+                            <div class="custom-checkbox"></div>
+                            <div class="passenger-control">
+                                <span>Child</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('child', -1)" disabled>-</button>
+                                <span class="passenger-count" id="child-count">0</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('child', 1)">+</button>
+                            </div>
+                        </li>
+                        <li class="passenger-selector">
+                            <div class="custom-checkbox"></div>
+                            <div class="passenger-control">
+                                <span>Infant (&lt; 2yrs)</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('infant', -1)" disabled>-</button>
+                                <span class="passenger-count" id="infant-count">0</span>
+                                <button class="passenger-btn" onclick="adjustPassenger('infant', 1)">+</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <button class="search-btn" onclick="searchFlights()">
+                <i class="fas fa-search"></i> Search Flights
+            </button>
+        </section>
+        
+        <!-- London Description -->
+        <section class="description-section">
+            <div class="section-title">
+                <i class="fas fa-landmark"></i>
+                <h3>Discover London</h3>
+            </div>
+            
+            <div class="promo-content">
+                <p>Discover the charm of London, a city where modernity and history blend to create a mesmerizing travel destination. Now that airfares are accessible, there's never been a better opportunity to see all that London has to offer.</p>
+                
+                <div class="highlight">
+                    <h3>Must-See Attractions</h3>
+                    <p>Commence your journey at well-known sites like the Houses of Parliament, Buckingham Palace, and the Tower of London. Take in the amazing views from the London Eye while strolling along the Thames River. Experience the rich history of the National Gallery and the British Museum, which both have internationally recognised collections.</p>
+                </div>
+                
+                <p>Oxford Street, Covent Garden, and Bond Street's upscale boutiques provide limitless retail therapy for shoppers. Savor a variety of culinary treats at both classic British pubs and restaurants with Michelin stars. Savor the lively nightlife, the colorful Camden Market, and West End theater productions.</p>
+                
+                <p>Green areas in London, such as Regent's Park and Hyde Park, offer peaceful escapes from the busy metropolis. In addition, the city serves as a starting point for day journeys to the stunning English countryside, Windsor Castle, and Stonehenge.</p>
+                
+                <p>There has never been a simpler way to get to London thanks to convenient flights. Savor the thrills, customs, and allure of one of the most famous towns on earth.</p>
+            </div>
+        </section>
+        
+        <!-- Weather Section - Before Footer -->
+        <section class="weather-section">
+            <div class="weather-card">
+                <h3>Current Weather in London</h3>
+                <div class="temperature" id="temperature">17°C</div>
+                <p id="weather-day">Thursday</p>
+                
+                <div class="weather-stats">
+                    <div class="stat">
+                        <div class="stat-value" id="humidity">72%</div>
+                        <div class="stat-label">Humidity</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="pressure">1018</div>
+                        <div class="stat-label">Pressure (hPa)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="wind">12.96 km/h</div>
+                        <div class="stat-label">Wind Speed</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+                    <!-- Footer Links Section -->
+        <div class="footer-link">
+            <h3>Air Peace Travel Services</h3>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">FMOs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Departure & Arrivals</a></li>
+                        <li><a href="#">Baggage Allowance</a></li>
+                        <li><a href="#">Routes</a></li>
+                        <li><a href="#">ADN Policy</a></li>
+                        <li><a href="#">Travel Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help and Contact</a></li>
+                        <li><a href="#">Special Assistance</a></li>
+                        <li><a href="#">Lost Property</a></li>
+                        <li><a href="#">Peace Advantage</a></li>
+                        <li><a href="#">Airport Charges</a></li>
+                        <li><a href="#">Sales Outlets</a></li>
+                        <li><a href="#">Safety Reporting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Deals</h4>
+                    <ul>
+                        <li><a href="#">Student Discount</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="#">Trade Partners</a></li>
+                        <li><a href="#">Corporate Accounts</a></li>
+                        <li><a href="#">Media Centre</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Air Peace</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+            
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">About AirPeace</a>
+            </div>
+        </footer>
+    </div>
+
+    <footer>
+            <p>&copy; 2023 AirPeace. All rights reserved.</p>
+            <p>Find the best deals on flights from Lagos to London and other destinations worldwide.</p>
+        </footer>
+    <script src="bella_site.js"></script>
+</body>
+</html>
