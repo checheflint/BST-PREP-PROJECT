@@ -52,7 +52,7 @@ body {
 }
 
 .otherInfo a {
-    color: #014FB4;
+    color: rgb(1, 79, 180);
 }
 
 .logoAndNav {
@@ -61,6 +61,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.10);
+    /* max-height: 12px; */
 }
 
 
@@ -76,6 +77,105 @@ nav a {
     font-size: 14px;
 }
 
+
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline;
+}
+
+/* Hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    flex-direction: row;
+    margin-top: 23px;
+    border-top: 3px solid rgb(192, 3, 3);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Dropdown links style */
+.dropdown-content a {
+    color: #5A5A5A;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+/* Hover effect for links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: inline-flex;
+    margin-right: 160px;
+}
+
+.dropdown:hover > a {
+    color: #014FB4;
+}
+
+
+.destination {
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.863);
+    overflow: hidden;
+}
+
+.destination:hover {
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px solid rgb(1, 79, 180);
+    overflow: hidden;
+    box-shadow: -4px 8px 18px rgba(0,0,0,0.2);
+}
+
+
+.dropdown-vert {
+    position: relative;
+    display: block;
+}
+
+.dropdown-vert-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 10;
+    flex-direction: column;
+    margin-top: 23px;
+    border-top: 3px solid rgb(192, 3, 3);
+    font-size: 0.8em;
+    color: gray;
+}
+
+.dropdown-vert-content:hover a {
+    color: solid blue;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+}
+
+.dropdown-vert:hover > a {
+    color: #014FB4;
+}
+
+.dropdown-vert:hover .dropdown-vert-content {
+    display: inline;
+}
+
 #discover {
     display: flex;
     height: 16px;
@@ -85,8 +185,8 @@ nav a {
 
 #travel {
     display: flex;
-    height: 16px;
-    width: auto;
+    /* height: 16px;
+    width: auto; */
     gap: 2px;
 }
 
